@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Manage Book</string>
+    <string name="tvDN">Login</string>
+    <string name="tvUser">User Name:</string>
+    <string name="tvPass">PassWord:</string>
+    <string name="btnDN">Login</string>
+    <!--    Logim-->
+    <string name="menuPL">Manage Category Book</string>
+    <string name="menuTT">My Information</string>
+    <string name="menuSach">Book Manege</string>
+    <string name="menuTrangChu">Home</string>
+    <!--    MenuOption-->
+    <string name="tvTL">Category</string>
+    <string name="tvTheLoai">Category Name</string>
+    <string name="btnLuu">Save</string>
+    <!--    Phân Loại-->
+    <string name="tvSP">Procduct</string>
+    <string name="tvName">Product Name</string>
+    <string name="tvHinhAnh">Image</string>
+    <string name="tvSL">Amount</string>
+    <string name="tvGia">Price</string>
+    <string name="btnChonAnh">Choose Photo</string>
+    <!--    Sản Phẩm-->
+    <string name="tvAboutUS">My Information</string>
+
+<!--    About Us-->
+    <string name="google_map_api">AIzaSyBZqdl4K4gWd5JxsFbm64XKM1M8mxvdxaU</string>
+<!--    api google-->
+</resources>

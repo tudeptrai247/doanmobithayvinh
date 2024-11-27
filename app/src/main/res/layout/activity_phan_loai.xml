@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhanLoaiActivity"
+    android:background="@drawable/background_image">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="#C6C29F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<TextView
+    android:id="@+id/tvPL"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/tvTL"
+    android:textSize="20pt"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTheLoai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvTheLoai"
+        app:layout_constraintTop_toBottomOf="@+id/tvPL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15pt"
+        android:layout_marginTop="20pt"/>
+    <EditText
+        android:id="@+id/edtTheLoai"
+        android:layout_width="120pt"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvTheLoai"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12pt"/>
+    <Button
+        android:id="@+id/btnLuuTheLoai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTheLoai"
+        android:text="@string/btnLuu"
+        android:textSize="12pt"
+        android:layout_marginTop="12pt"/>
+        <ListView
+            android:id="@+id/lvTheLoai"
+            android:layout_width="match_parent"
+            android:layout_height="0pt"
+            app:layout_constraintTop_toBottomOf="@id/btnLuuTheLoai"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

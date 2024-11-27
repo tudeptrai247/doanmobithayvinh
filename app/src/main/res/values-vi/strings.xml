@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quản Lý Sách</string>
+    <string name="tvDN">Đăng Nhập</string>
+    <string name="tvUser">Tài Khoản :</string>
+    <string name="tvPass">Mật Khẩu :</string>
+    <string name="btnDN">Đăng Nhập</string>
+    <!--    Logim-->
+    <string name="menuPL">Quản Lý Thể Loại Sách</string>
+    <string name="menuTT">Thông Tin Của Chúng Tôi</string>
+    <string name="menuSach">Quản Sách</string>
+    <string name="menuTrangChu">Trang Chủ</string>
+    <!--    MenuOption-->
+    <string name="tvTL">Thể Loại</string>
+    <string name="tvTheLoai">Tên Thể Loại</string>
+    <string name="btnLuu">Lưu</string>
+    <!--    Phân Loại-->
+    <string name="tvSP">Sản Phẩm</string>
+    <string name="tvName">Tên Sản Phẩm</string>
+    <string name="tvHinhAnh">Hình Ảnh</string>
+    <string name="tvSL">Số Lượng</string>
+    <string name="tvGia">Giá</string>
+    <string name="btnChonAnh">Chọn Ảnh</string>
+    <!--    Sản Phẩm-->
+    <string name="tvAboutUS">Thông Tin Của Chúng Tôi</string>
+
+    <!--    About Us-->
+    <string name="google_map_api">AIzaSyBZqdl4K4gWd5JxsFbm64XKM1M8mxvdxaU</string>
+    <!--    api google-->
+</resources>
