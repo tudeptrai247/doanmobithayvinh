@@ -81,13 +81,13 @@ public class PhanLoaiActivity extends AppCompatActivity {
                 String name =txtTheLoai.getText().toString().trim();
                 if(selectedCategoryID == -1){
                     if(databaseHelper.insertCategory(name)) {
-                        Toast.makeText(PhanLoaiActivity.this, "Thêm Thành Công", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PhanLoaiActivity.this,getString(R.string.toast_themsp), Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(PhanLoaiActivity.this, "Thêm Thất Bại", Toast.LENGTH_SHORT).show();
                     }
                 }else {
                     if(databaseHelper.updateCategory(selectedCategoryID,name)){
-                        Toast.makeText(PhanLoaiActivity.this,"Cập Nhật Thành Công" ,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PhanLoaiActivity.this,getString(R.string.toast_updatesp) ,Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(PhanLoaiActivity.this,"Cập Nhật Thất Bại" ,Toast.LENGTH_SHORT).show();
                     }
@@ -103,10 +103,14 @@ public class PhanLoaiActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
                CategoryClass selectCategory = (CategoryClass) adapterView.getItemAtPosition(position);
                int categoryID =selectCategory.getId();
+               String messageTitle= getString(R.string.toast_thongbao);
+               String tieude=getString(R.string.toast_tieudexoa);
+               String yes =getString(R.string.toast_positive);
+               String no= getString(R.string.toast_negative);
                new AlertDialog.Builder(PhanLoaiActivity.this)
-                       .setTitle("Xác Nhận Xóa?")
-                       .setMessage("Bạn Có Muốn Xóa Thể Loại Này ko")
-                       .setPositiveButton("Dạ Có", new DialogInterface.OnClickListener() {
+                       .setTitle(tieude)
+                       .setMessage(messageTitle)
+                       .setPositiveButton(yes, new DialogInterface.OnClickListener() {
                            @Override
                            public void onClick(DialogInterface dialogInterface, int i) {
                                try{
@@ -114,17 +118,18 @@ public class PhanLoaiActivity extends AppCompatActivity {
                                    if(result >0){
 
                                        // tải lại danh sách gọi từ hàm update mỗi khi xóa
-                                       Toast.makeText(PhanLoaiActivity.this,"Xóa thành công",Toast.LENGTH_SHORT).show();
+                                       Toast.makeText(PhanLoaiActivity.this,getString(R.string.toast_deletesp),Toast.LENGTH_SHORT).show();
                                        updateCategoryList();
                                    }else {
                                        Toast.makeText(PhanLoaiActivity.this, "Xóa Thất bại", Toast.LENGTH_SHORT).show();
                                    }
                                }catch(SQLiteConstraintException e){
-                                   showAlert("Không Thể Xóa Khi Sản Phẩm Vẫn Còn");
+                                   String message = getString(R.string.toast_cantdeletesp);
+                                   showAlert(message);
                                }
                            }
                        })
-                       .setNegativeButton("Hok",null)
+                       .setNegativeButton(no,null)
                        .show();
                 updateCategoryList();
                 return true;
@@ -148,9 +153,9 @@ public class PhanLoaiActivity extends AppCompatActivity {
     }
     private void showAlert(String message){
         AlertDialog.Builder builder =new AlertDialog.Builder(PhanLoaiActivity.this);
-        builder.setTitle("Thông Báo")
-                .setMessage(message)
-                .setPositiveButton("Dạ",null)
+        String yes =getString(R.string.toast_positive);
+        builder.setMessage(message)
+                .setPositiveButton(yes,null)
                 .show();
     }
 }

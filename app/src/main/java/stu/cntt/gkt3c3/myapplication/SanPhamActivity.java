@@ -166,11 +166,11 @@ public class SanPhamActivity extends AppCompatActivity {
 
 
                 if(name.isEmpty() || price.isEmpty() || amountStr.isEmpty()){
-                    Toast.makeText(SanPhamActivity.this,"Vui Lòng Điền Đầy Đủ Thông Tin",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SanPhamActivity.this,getString(R.string.toast_thieuthongtin),Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if(imageUri == null && selectedIdBook ==-1){
-                    Toast.makeText(SanPhamActivity.this,"Vui Lòng Điền Đầy Đủ Thông Tin",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SanPhamActivity.this,getString(R.string.toast_thieuthongtin),Toast.LENGTH_SHORT).show();
                     return;
                 }
                 try {
@@ -187,14 +187,14 @@ public class SanPhamActivity extends AppCompatActivity {
                     if (selectedIdBook == -1) {
                         result = databaseHelper.insertBook(name, catagoryName, image, amount, price);
                         if (result) {
-                            Toast.makeText(SanPhamActivity.this, "Sản Phẩm Đã Được Lưu", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SanPhamActivity.this, getString(R.string.toast_themsp), Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(SanPhamActivity.this, "Lưu Thất Bại", Toast.LENGTH_SHORT).show();
                         }
                     }else{
                         result= databaseHelper.updateBook(selectedIdBook,name,catagoryName,image,amount,price);
                         if (result){
-                            Toast.makeText(SanPhamActivity.this,"Sản Phẩm Được Cập Nhật",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SanPhamActivity.this,getString(R.string.toast_updatesp),Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(SanPhamActivity.this,"Cập Nhật Thất Bại",Toast.LENGTH_SHORT).show();
                         }

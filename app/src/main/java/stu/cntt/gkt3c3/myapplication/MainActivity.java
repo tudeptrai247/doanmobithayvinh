@@ -100,23 +100,27 @@ public class MainActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
                 BookClass selectBook = (BookClass) adapterView.getItemAtPosition(position);
                 int bookID =selectBook.getId();
+                String messageTitle= getString(R.string.toast_thongbao);
+                String tieude=getString(R.string.toast_tieudexoa);
+                String yes =getString(R.string.toast_positive);
+                String no= getString(R.string.toast_negative);
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("Xác Nhận Xóa")
-                        .setMessage("Bạn có muốn xóa không")
-                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                        .setTitle(tieude)
+                        .setMessage(messageTitle)
+                        .setPositiveButton(yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 int result =databaseHelper.deleteBook(bookID);
                                 if(result >0)
                                     {
                                         // tải lại danh sách gọi từ hàm update mỗi khi xóa
-                                        Toast.makeText(MainActivity.this,"Xóa thành công",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(MainActivity.this,getString(R.string.toast_deletesp),Toast.LENGTH_SHORT).show();
                                         updateBookList();
                                     }else {
                                         Toast.makeText(MainActivity.this, "Xóa Thất bại", Toast.LENGTH_SHORT).show();
                                     }
                             }
-                        }).setNegativeButton("Không",null)
+                        }).setNegativeButton(no,null)
                         .show();
                 return true;
             }

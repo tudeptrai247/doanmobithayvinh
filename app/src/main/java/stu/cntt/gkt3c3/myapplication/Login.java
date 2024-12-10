@@ -28,17 +28,17 @@ public class Login extends AppCompatActivity {
                 String pass =binding.edtPass.getText().toString();
 
                 if (user.equals("") || pass.equals("")){
-                    Toast.makeText(Login.this,"Vui lòng nhập tài khoản hoặc mật khẩu",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this,getString(R.string.toast_botrong),Toast.LENGTH_SHORT).show();
                 }else {
                     Boolean checkCredentials = databaseHelper.checkAccount(user,pass);
 
                     if (checkCredentials == true){
-                        Toast.makeText(Login.this,"Đăng Nhập Thành Công",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this,getString(R.string.toast_dangnhapsuccess),Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                         startActivity(intent);
                     }else
                     {
-                        Toast.makeText(Login.this,"Sai Tài Khoản Hoặc Mật Khẩu",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this,getString(R.string.toast_dangnhapfail),Toast.LENGTH_SHORT).show();
                     }
                 }
             }

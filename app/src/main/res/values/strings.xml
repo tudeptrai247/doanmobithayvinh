@@ -22,8 +22,23 @@
     <string name="btnChonAnh">Choose Photo</string>
     <!--    Sản Phẩm-->
     <string name="tvAboutUS">My Information</string>
-
 <!--    About Us-->
     <string name="google_map_api">AIzaSyBZqdl4K4gWd5JxsFbm64XKM1M8mxvdxaU</string>
 <!--    api google-->
+    <string name="toast_thieuthongtin">Please Fill Out All Information</string>
+    <string name="toast_themsp">Added successfully</string>
+    <string name="toast_updatesp">Updated successfully</string>
+    <string name="toast_deletesp">Deleted succesfully</string>
+    <string name="toast_cantdeletesp">Cannot be deleted while the product is still available</string>
+    <!--    thông báo-->
+    <string name="toast_tieudexoa">Confirm Deletion</string>
+    <string name="toast_thongbao">Do you want to delete?</string>
+    <string name="toast_negative">No</string>
+    <string name="toast_positive">Yes</string>
+    <string name="toast_notice">Notice</string>
+    <!--    Login thông báo-->
+    <string name="toast_botrong">Please enter account and password</string>
+    <string name="toast_dangnhapsuccess">Login successfully</string>
+    <string name="toast_dangnhapfail">Wrong username or password</string>
+
 </resources>

@@ -27,4 +27,19 @@
     <!--    About Us-->
     <string name="google_map_api">AIzaSyBZqdl4K4gWd5JxsFbm64XKM1M8mxvdxaU</string>
     <!--    api google-->
+    <string name="toast_thieuthongtin">Vui Lòng Điền Đầy Đủ Thông Tin</string>
+    <string name="toast_themsp"> Thêm Thành Công</string>
+    <string name="toast_updatesp">Cập Nhật Thành Công</string>
+    <string name="toast_deletesp">Xóa thành công</string>
+    <string name="toast_cantdeletesp">Không thể xóa khi sản phẩm vẫn còn</string>
+<!--    thông báo-->
+    <string name="toast_tieudexoa">Xác Nhận Xóa</string>
+    <string name="toast_thongbao">Bạn có muốn xóa không</string>
+    <string name="toast_negative">Không</string>
+    <string name="toast_positive">Có</string>
+    <string name="toast_notice">Thông Báo</string>
+<!--    Login thông báo-->
+    <string name="toast_botrong">Vui lòng nhập tài khoản hoặc mật khẩu</string>
+    <string name="toast_dangnhapsuccess">Đăng Nhập Thành Công</string>
+    <string name="toast_dangnhapfail">Sai Tài Khoản Hoặc Mật Khẩu</string>
 </resources>
